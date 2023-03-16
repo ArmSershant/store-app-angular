@@ -1,0 +1,57 @@
+<div class="flex flex-row flex-wrap mx-auto justify-center">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="text-center max-w-sm">
+    <div class="p-2">
+      <input
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        type="text"
+        name="id"
+        id="id"
+        #id="ngModel"
+        [ngModel]="product.id"
+        placeholder="change Id"
+      />
+      <input
+        type="text"
+        name="title"
+        id="title"
+        #title="ngModel"
+        [ngModel]="product.title"
+        placeholder="change title"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      />
+    </div>
+    <input
+      type="text"
+      name="description"
+      id="description"
+      #description="ngModel"
+      [ngModel]="product.description"
+      placeholder="change description"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    />
+    <input
+      type="text"
+      name="image"
+      id="image"
+      #image="ngModel"
+      [ngModel]="product.image"
+      placeholder="change image"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    />
+    <input
+      type="text"
+      name="price"
+      id="price"
+      #price="ngModel"
+      [ngModel]="product.price"
+      placeholder="change price"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    />
+    <button
+      type="submit"
+      class="items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300"
+    >
+      Save
+    </button>
+  </form>
+</div>

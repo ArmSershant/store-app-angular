@@ -1,0 +1,29 @@
+<div class="flex flex-row flex-wrap mx-auto justify-center">
+  <div class="text-center max-w-sm">
+    <div class="p-2">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+        {{ product.title }}
+      </h5>
+    </div>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 break-words">
+      {{ product.description }}
+    </p>
+    <img
+      class="rounded-t-lg mx-auto w-96 h-96"
+      [src]="product.image"
+      [alt]="product.title"
+    />
+    <p class="text-center text-yellow-600">${{ product.price }}</p>
+    <button
+      class="items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+    >
+      Buy
+    </button>
+    <button
+      [routerLink]="['/products/edit/', product.id]"
+      class="items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300"
+    >
+      Edit
+    </button>
+  </div>
+</div>

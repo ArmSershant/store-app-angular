@@ -1,0 +1,39 @@
+<div class="flex flex-row flex-wrap mx-auto justify-center">
+  <div *ngFor="let product of products; index as i">
+    <div
+      class="text-center max-w-sm bg-white border border-gray-200 rounded-lg shadow mx-2 my-4"
+    >
+      <div class="p-5">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+          {{ product.title | truncate : 11 : "..." }}
+        </h5>
+      </div>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 break-words">
+        {{ product.description | truncate : 35 : "..." }}
+      </p>
+      <img
+        class="rounded-t-lg mx-auto w-20 h-20"
+        [src]="product.image"
+        [alt]="product.title"
+      />
+      <p class="text-center text-yellow-600">${{ product.price }}</p>
+      <button
+        class="items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+      >
+        Buy
+      </button>
+      <a
+        [routerLink]="['/products/', product.id]"
+        class="items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300"
+      >
+        Details
+      </a>
+      <button
+      (click)="onDelete(product)"
+      class="items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-green-300"
+    >
+      Delete
+    </button>
+    </div>
+  </div>
+</div>
